@@ -1,0 +1,22 @@
+<el-form :inline="true" ref="memberInfo" :model="memberInfo">
+      <el-form-item prop="cardNum">
+        <el-input v-model="memberInfo.cardNum" placeholder="会员卡号"></el-input>
+      </el-form-item>
+      <el-form-item prop="name">
+        <el-input v-model="memberInfo.name" placeholder="会员姓名"></el-input>
+      </el-form-item>
+      <el-form-item class="pay" prop="payType">
+        <el-select v-model="memberInfo.payType" placeholder="支付类型">
+          <el-option v-for="item in payType" :key="item.type" :label="item.name" :value="item.type"></el-option>
+        </el-select>
+      </el-form-item>
+      <el-form-item prop="birthday">
+        <el-date-picker v-model="memberInfo.birthday" type="date" placeholder="出生日期">
+        </el-date-picker>
+      </el-form-item>
+      <el-form-item>
+        <el-button type="primary" @click="handleSearch">查询</el-button>
+        <el-button type="primary" @click="handleAdd">新增</el-button>
+        <el-button @click="handleReset">重置</el-button>
+      </el-form-item>
+    </el-form>

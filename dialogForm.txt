@@ -1,0 +1,35 @@
+<!-- 
+ <el-dialog :title="editId?'编辑会员':'新增会员'" :visible.sync="dialogVisible" width="40%" :before-close="handleClose">
+      <el-form :model="addInfo" :rules="rules" ref="addInfo" label-width="100px" class="demo-addInfo">
+        <el-form-item label="会员卡号" prop="cardNum">
+          <el-input v-model="addInfo.cardNum"></el-input>
+        </el-form-item>
+        <el-form-item label="会员姓名" prop="name">
+          <el-input v-model="addInfo.name"></el-input>
+        </el-form-item>
+        <el-form-item prop="birthday" label="会员生日">
+          <el-date-picker type="date" placeholder="选择日期" v-model="addInfo.birthday" style="width: 50%;"></el-date-picker>
+        </el-form-item>
+        <el-form-item label="手机号码" prop="phone">
+          <el-input v-model="addInfo.phone"></el-input>
+        </el-form-item>
+        <el-form-item label="开卡金额" prop="money">
+          <el-input v-model="addInfo.money"></el-input>
+        </el-form-item>
+        <el-form-item label="可用积分" prop="integral">
+          <el-input v-model="addInfo.integral">0</el-input>
+        </el-form-item>
+        <el-form-item label="支付类型" prop="payType">
+          <el-select v-model="addInfo.payType" placeholder="支付类型">
+            <el-option v-for="item in payType" :label="item.name" :value="item.type"></el-option>
+          </el-select>
+        </el-form-item>
+        <el-form-item label="会员地址" prop="address">
+          <el-input type="textarea" v-model="addInfo.address"></el-input>
+        </el-form-item>
+      </el-form>
+      <span slot="footer" class="dialog-footer">
+        <el-button @click="handleCancel">取 消</el-button>
+        <el-button type="primary" @click="handleAddOk('addInfo')">确 定</el-button>
+      </span>
+    </el-dialog> -->
